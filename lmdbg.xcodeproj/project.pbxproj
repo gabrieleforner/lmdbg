@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8A2B5DEF2C70B1C300002EBD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B5DEE2C70B1C300002EBD /* main.swift */; };
+		8A2B5DF82C70B26400002EBD /* OffDebugCLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B5DF72C70B26400002EBD /* OffDebugCLI.swift */; };
+		8A2B5DFC2C70B6D100002EBD /* OffDebugFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B5DFB2C70B6D100002EBD /* OffDebugFuncs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		8A2B5DEB2C70B1C300002EBD /* lmdbg */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lmdbg; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A2B5DEE2C70B1C300002EBD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8A2B5DF72C70B26400002EBD /* OffDebugCLI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffDebugCLI.swift; sourceTree = "<group>"; };
+		8A2B5DFB2C70B6D100002EBD /* OffDebugFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffDebugFuncs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +45,9 @@
 		8A2B5DE22C70B1C200002EBD = {
 			isa = PBXGroup;
 			children = (
-				8A2B5DED2C70B1C300002EBD /* lmdbg */,
+				8A2B5DF62C70B24500002EBD /* kern */,
+				8A2B5DF52C70B24000002EBD /* core */,
+				8A2B5DEE2C70B1C300002EBD /* main.swift */,
 				8A2B5DEC2C70B1C300002EBD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +60,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8A2B5DED2C70B1C300002EBD /* lmdbg */ = {
+		8A2B5DF52C70B24000002EBD /* core */ = {
 			isa = PBXGroup;
 			children = (
-				8A2B5DEE2C70B1C300002EBD /* main.swift */,
+				8A2B5DF72C70B26400002EBD /* OffDebugCLI.swift */,
+				8A2B5DFB2C70B6D100002EBD /* OffDebugFuncs.swift */,
 			);
-			path = lmdbg;
+			path = core;
+			sourceTree = "<group>";
+		};
+		8A2B5DF62C70B24500002EBD /* kern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = kern;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +134,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A2B5DFC2C70B6D100002EBD /* OffDebugFuncs.swift in Sources */,
+				8A2B5DF82C70B26400002EBD /* OffDebugCLI.swift in Sources */,
 				8A2B5DEF2C70B1C300002EBD /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +268,7 @@
 				DEVELOPMENT_TEAM = RTSUG9QFR4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -263,6 +280,7 @@
 				DEVELOPMENT_TEAM = RTSUG9QFR4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
